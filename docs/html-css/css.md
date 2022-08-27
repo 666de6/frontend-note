@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-14 09:48:26
- * @LastEditTime: 2021-08-17 13:58:40
+ * @LastEditTime: 2022-08-26 10:05:30
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-training-doc/docs/html-css/css.md
@@ -13,8 +13,8 @@ color: red;
 font-size: 14px;  
 ...  
 这个结构称为**规则集**（通常简称“规则”）  
-
 ![css规则集](./assets/css-declaration.png)
+## 块元素，行元素
 ## 选择器
 CSS选择器是CSS规则的第一部分。它是元素和其他部分组合起来告诉浏览器哪个HTML元素应当是被选为应用规则中的CSS属性值的方式。选择器所选择的元素，叫做“选择器的对象”。
 
@@ -65,6 +65,8 @@ flex模型说明如下:[点击查看MDN](https://developer.mozilla.org/zh-CN/doc
 **CSS3 过渡**: transition、transition-duration...  
 **CSS3 动画**: @keyframes、animation...  
 ...
-## CSS书写与命名
+## 重绘和回流<font color=#3eaf7c>*</font>
+## CSS预处理器<font color=#3eaf7c>*</font>
+## CSS书写与命名<font color=#3eaf7c>*</font>
 包括命名规范以及书写规范，[可借鉴一些比较好的规范示例](https://www.bookstack.cn/read/html-css-guide/css)
 

@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-14 09:48:07
- * @LastEditTime: 2021-09-09 16:49:05
+ * @LastEditTime: 2022-08-27 17:11:28
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-training-doc/docs/html-css/html.md
@@ -151,8 +151,12 @@ result1 = outside(3)(5); // returns 8
 ## 事件
 事件是编程时系统内发生的动作或者发生的事情，系统响应事件后，如果需要，您可以某种方式对事件做出回应。例如：如果用户在网页上单击一个按钮，您可能想通过显示一个信息框来响应这个动作。
 
-### 使用网页事件的方式
-**事件处理器属性**  
+### 事件处理程序
+**行内事件处理器/  HTML事件处理程序** - (不建议)
+```html
+<button onclick="alert('Hello, this is my old-fashioned event handler!');">Press me</button>
+```
+**事件处理器属性/ DOM0级事件处理程序**  
 ```javascript
 const btn = document.querySelector('button');
 
@@ -161,7 +165,7 @@ btn.onclick = function() {
   document.body.style.backgroundColor = rndCol;
 }
 ```
-**addEventListener 和removeEventListener**  
+**addEventListener 和removeEventListener/ DOM2级事件处理程序**  
 ```javascript
 const btn = document.querySelector('button');
 
@@ -193,8 +197,13 @@ form.onsubmit = function(e) {
   }
 }
 ```
-**事件冒泡及捕获**  
+**事件流 - 事件冒泡及捕获**  
 ![事件冒泡及捕获](./assets/bubbling-capturing.png)
+
+**事件委托**
+
+冒泡还允许我们利用事件委托——这个概念依赖于这样一个事实，如果你想要在大量子元素中单击任何一个都可以运行一段代码，您可以将事件监听器设置在其父节点上，并让子节点上发生的事件冒泡到父节点上，而不是每个子节点单独设置事件监听器。
+
 ## DOM、BOM操作
 ### DOM相关
 我们在编写HTML代码并且运行后，就会在内存中得到一棵DOM树，HTML的写法会被转化成对应的文档模型，而我们则可以通过JavaScript等语言去访问这个文档模型（DOM）。这里我们每天都需要用到，要重点掌握的是：***Document***、***Element***、***Text*** 节点。  
@@ -251,6 +260,25 @@ BOM操作就是操作浏览器相关的api，**window**是BOM中的顶层对象�
 
 ## 正则表达式
 [正则表达式的创建和使用](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Guide/Regular_Expressions)
+## XMLHttpRequest
+**XMLHttpRequest**（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。XMLHttpRequest 在 AJAX 编程中被大量使用。  
+```js
+function reqListener () {
+  console.log("readyState", this.readyState)
+  console.log("responseText", this.responseText);
+}
+var oReq = new XMLHttpRequest();
+oReq.onreadystatechange = reqListener;
+oReq.open("GET", "https://developer.mozilla.org/");
+oReq.send();
+```
+### AJAX
+**MDN定义**  
+AJAX（Asynchronous JavaScript And XML ）是一种使用 XMLHttpRequest 技术构建更复杂，动态的网页的编程实践。
+
+**特点**  
+AJAX允许只更新一个 HTML 页面的部分 DOM，而无须重新加载整个页面。——**局部刷新**  
+AJAX还允许异步工作，这意味着当网页的一部分正试图重新加载时，您的代码可以继续运行。——**异步**
 ## this<font color=#3eaf7c>*</font>
 [点击查看MDN](https://developer.mozilla.org/zh-CN/docs/Web/JavaScript/Reference/Operators/this)  
 **全局上下文**  
@@ -329,14 +357,5 @@ var b = {
 b.d();
 b.d.call({c:4});
 ```
-## XMLHttpRequest
-**XMLHttpRequest**（XHR）对象用于与服务器交互。通过 XMLHttpRequest 可以在不刷新页面的情况下请求特定 URL，获取数据。这允许网页在不影响用户操作的情况下，更新页面的局部内容。XMLHttpRequest 在 AJAX 编程中被大量使用。  
-### AJAX
-**MDN定义**  
-AJAX（Asynchronous JavaScript And XML ）是一种使用 XMLHttpRequest 技术构建更复杂，动态的网页的编程实践。
-
-**特点**  
-AJAX允许只更新一个 HTML 页面的部分 DOM，而无须重新加载整个页面。——**局部刷新**  
-AJAX还允许异步工作，这意味着当网页的一部分正试图重新加载时，您的代码可以继续运行。——**异步**
 ## 原型继承/原型链<font color=#3eaf7c>*</font>
 ## 作用域链<font color=#3eaf7c>*</font>

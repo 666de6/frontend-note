@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2021-07-14 09:48:07
- * @LastEditTime: 2021-10-23 13:38:33
+ * @LastEditTime: 2022-08-26 10:01:38
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: /my-training-doc/docs/html-css/html.md
@@ -10,7 +10,7 @@
 
 ## 常用标签
 div, span...
-## 语义化标签、属性
+## 语义化标签
 (1) 用正确的标签做正确的事情;  
 (2) html 语义化让页面的内容结构化,结构更清晰,便于对浏览器、搜索引擎解析;  
 (3) 即使在没有样式 CSS 情况下也以一种文档格式显示,并且是容易阅读的;  
@@ -109,7 +109,7 @@ HTML5新增内建对象，可以读取本地文件内容。[点击查看MDN](htt
 **概念**  
 HTML的最新稳定版本,HTML5将HTML从用于构造一个文档的一个简单标记，到一个完整的应用程序开发平台。除其他功能外,HTML5还包括新元素和用于增强存储、多媒体和硬件访问的JavaScript APIs。
 
-### 新增元素
+### 新增元素(标签，属性，API)
 HTML5不仅新增了一些标签和属性，还对以前的标签和属性做了一些删、改。
 ### Web Storage
 Web Storage API 提供机制， 使浏览器能以一种比使用Cookie更直观的方式存储键/值对。  
