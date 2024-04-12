@@ -6,11 +6,9 @@ tagline: 持续更新中...
 actionText: 点击瞅瞅
 actionLink: /html-css/
 features:
-- title: HTML/CSS
-  details: 布局及样式。
-- title: JavaScript
-  details: 动态渲染及交互。
-- title: 前端工程化（基于Vue）
+- title: HTML/CSS/JavaScript
+  details: 布局及样式。动态渲染及交互。
+- title: 前端工程化
   details: 基于node、vue、webpack的前端工程化。
 - title: 浏览器及网络
   details: 浏览器工作流程及http通讯。

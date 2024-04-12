@@ -3,7 +3,6 @@ module.exports = {
     ['link', { rel: 'icon', href: '/docs-logo.png' }]
   ],
   themeConfig: {
-
     logo: '/docs-logo.png',
     nav: [
       { text: 'HTML/CSS', link: '/html-css/' },
@@ -11,7 +10,7 @@ module.exports = {
       { text: '前端工程化', link: '/engineering/' },
       { text: '浏览器及网络', link: '/browser/' },
       { text: 'Git入门', link: '/git/' }, 
-      { text: 'GitHub', link: '/architecture/' }, 
+      { text: 'GitHub', link: 'https://github.com/666de6/frontend-note/' }, 
     ],
     sidebar: [
       {
