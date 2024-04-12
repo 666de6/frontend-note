@@ -15,5 +15,3 @@
 PC端UI组件库
 ## vant、vux...
 移动端UI组件库
-## DHC-UI
-[内部UI组件库-PC](http://42.202.134.229:8085/dhc/#/component/installation)
